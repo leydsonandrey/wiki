@@ -1,3 +1,8 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+[Bem-vindo!](README.md)
+
+# PC
+
+- [Gnome](./pc/gnome.md)
+- [VS Codium](./pc/vscodium.md)

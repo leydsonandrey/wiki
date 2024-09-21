@@ -1,6 +1,16 @@
 [book]
 authors = ["Leydson Andrey"]
-language = "en"
+language = "pt-br"
+theme = "Rust"
 multilingual = false
 src = "src"
 title = "wiki"
+
+[output.html.search]
+limit-results = 15
+
+[output.html]
+mathjax-support = true
+
+[output.html.playground]
+runnable = false
