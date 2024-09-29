@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Adiciona todos os arquivos modificados ao stage
+git add .
+
+# Obtém a data e hora atual no formato desejado para o commit
+datahora=$(date +'%Y-%m-%d %H:%M:%S')
+
+# Faz o commit com a mensagem contendo a data e hora atual
+git commit -m "Update $datahora" -m "Arquivos modificados:
+$(git diff --name-only --cached)"
+git push

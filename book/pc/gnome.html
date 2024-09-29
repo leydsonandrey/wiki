@@ -176,32 +176,49 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="gnome"><a class="header" href="#gnome">Gnome</a></h1>
-<p><img src="imagens/screenshot.png" alt="" /></p>
-<p>Minha configuração do <a href="https://www.gnome.org/">Gnome</a> com <a href="https://wayland.freedesktop.org/">Wayland</a>. Atualmente usando no <a href="https://endeavouros.com/">EndeavourOS</a> (base <a href="https://archlinux.org/">Arch Linux</a>).</p>
 <ul>
 <li><a href="#extens%C3%B5es">Extensões</a></li>
+<li><a href="#keybinds">Keybinds</a></li>
+<li><a href="#tema">Tema</a></li>
 <li><a href="#configurando-o-tema-adwaita-para-flatpak">Configurando o tema Adwaita para Flatpak</a></li>
 </ul>
+<p><img src="imagens/screenshot.png" alt="" /></p>
+<p>Minha configuração do <a href="https://www.gnome.org/">Gnome</a> com <a href="https://wayland.freedesktop.org/">Wayland</a>. Atualmente usando no <a href="https://endeavouros.com/">EndeavourOS</a> (base <a href="https://archlinux.org/">Arch Linux</a>).</p>
 <h2 id="extensões"><a class="header" href="#extensões">Extensões</a></h2>
 <ul>
 <li><a href="https://extensions.gnome.org/extension/4269/alphabetical-app-grid/">Alphabetical App Grid</a>: Deixa o menu de aplicativos em ordem alfabética;</li>
 <li><a href="https://extensions.gnome.org/extension/517/caffeine/">Caffeine</a>: Desabilita a proteção de tela e a suspensão automática;</li>
 <li><a href="https://extensions.gnome.org/extension/779/clipboard-indicator/">Clipboard Indicator</a>: Gerenciador de área de transferência;</li>
 <li><a href="https://extensions.gnome.org/extension/5669/compact-top-bar/">Compact Top Bar</a>: Diminui o espaço entre os itens da barra superior;</li>
-<li><a href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash to Dock</a>: Deixa a dock parecida com a do MacOS;</li>
 <li><a href="https://extensions.gnome.org/extension/1160/dash-to-panel/">Dash to Panel</a>: Deixa a dock parecida com a do Windows, além de remover a barra superior e mover seus itens para a dock;</li>
 <li><a href="https://extensions.gnome.org/extension/6242/emoji-copy/">Emoji Copy</a>: Menu de emojis parecido com a do Windows 10;</li>
-<li><a href="https://extensions.gnome.org/extension/841/freon/">Freon</a>: Mostra a temperatura dos hardwares na dock;</li>
-<li><a href="https://extensions.gnome.org/extension/1319/gsconnect/">GSConnect</a>: Implementação do KDEConnect ao Gnome;</li>
-<li><a href="https://extensions.gnome.org/extension/28/gtile/">gTile</a>: Possibilita gerenciar a jenelas como um grid;</li>
+<li><a href="https://extensions.gnome.org/extension/1319/gsconnect/">GSConnect</a>: Implementação do <a href="https://kdeconnect.kde.org/">KDEConnect</a> ao Gnome;</li>
+<li><a href="https://extensions.gnome.org/extension/5040/start-overlay-in-application-view/">Start Overlay in Application View</a>: Faz o <code>Super</code> ser a keybind do menu de aplicativos;</li>
 <li><a href="https://extensions.gnome.org/extension/2890/tray-icons-reloaded/">Tray Icons: Reloaded</a>: Mostra os ícones de bandeja igual ao Windows;</li>
 <li><a href="https://extensions.gnome.org/extension/19/user-themes/">User Themes</a>: Tema do shell personalizado.</li>
 </ul>
+<h2 id="keybinds"><a class="header" href="#keybinds">Keybinds</a></h2>
+<ul>
+<li><code>Super</code>: Abre o menu de aplicativos;</li>
+<li><code>Super+a</code>: Abre as notificações;</li>
+<li><code>Super+v</code>: Abre o clipboard;</li>
+<li><code>Super+.</code>: Abre o seletor de emojis;</li>
+<li><code>Super+Tab</code>: Mostra o panorama;</li>
+<li><code>Super+Enter</code>: abre o terminal;</li>
+<li><code>Super+F11</code>: Tela cheia;</li>
+<li><code>Alt+Tab</code>: Altera entre aplicativos.</li>
+</ul>
+<h2 id="tema"><a class="header" href="#tema">Tema</a></h2>
+<ul>
+<li>Tema e ícones: Adwaita;</li>
+<li>Wallpaper: <a href="/pc/imagens/endeavouros-wallpaper.png" download>Clique para baixar</a>;</li>
+<li>Cursor: <a href="https://www.pling.com/p/1408466">macOS Cursor</a>.</li>
+</ul>
 <h2 id="configurando-o-tema-adwaita-para-flatpak"><a class="header" href="#configurando-o-tema-adwaita-para-flatpak">Configurando o tema Adwaita para Flatpak</a></h2>
-<p>Mudar o tema dos programas Flatpak:</p>
+<p>Mudar o tema dos programas <a href="https://flatpak.org/">Flatpak</a>:</p>
 <pre><code class="language-bash">sudo flatpak override --env=GTK_THEME=Adwaita-dark
 </code></pre>
-<p>Corrigir o erro dos programas Flatpak com o cursor maior que o resto do sistema:</p>
+<p>Corrigir o erro dos programas <a href="https://flatpak.org/">Flatpak</a> com o cursor maior que o resto do sistema:</p>
 <pre><code class="language-bash">flatpak --user override --filesystem=/home/$USER/.icons/:ro
 flatpak --user override --filesystem=/usr/share/icons/:ro
 </code></pre>
