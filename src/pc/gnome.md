@@ -12,9 +12,9 @@ Minha configuração do [Gnome](https://www.gnome.org/) com [Wayland](https://wa
 ## Extensões
 
 - [Alphabetical App Grid](https://extensions.gnome.org/extension/4269/alphabetical-app-grid/): Deixa o menu de aplicativos em ordem alfabética;
+- [Arch Linux Updates Indicator](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/);
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/): Desabilita a proteção de tela e a suspensão automática;
 - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/): Gerenciador de área de transferência;
-- [Compact Top Bar](https://extensions.gnome.org/extension/5669/compact-top-bar/): Diminui o espaço entre os itens da barra superior;
 - [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/): Deixa a dock parecida com a do Windows, além de remover a barra superior e mover seus itens para a dock;
 - [Emoji Copy](https://extensions.gnome.org/extension/6242/emoji-copy/): Menu de emojis parecido com a do Windows 10;
 - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/): Implementação do [KDEConnect](https://kdeconnect.kde.org/) ao Gnome;
