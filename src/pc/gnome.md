@@ -2,7 +2,7 @@
 
 - [Extensões](#extens%C3%B5es)
 - [Keybinds](#keybinds)
-- [Tema](#tema)
+- [Aparência](#aparência)
 - [Configurando o tema Adwaita para Flatpak](#configurando-o-tema-adwaita-para-flatpak)
 
 ![](imagens/screenshot.png)
@@ -33,11 +33,12 @@ Minha configuração do [Gnome](https://www.gnome.org/) com [Wayland](https://wa
 - `Super+F11`: Tela cheia;
 - `Alt+Tab`: Altera entre aplicativos.
 
-## Tema
+## Aparência
 
 - Tema e ícones: Adwaita;
 - Wallpaper: <a href="/pc/imagens/endeavouros-wallpaper.png" download>Clique para baixar</a>;
-- Cursor: [macOS Cursor](https://www.pling.com/p/1408466).
+- Cursor: [macOS Cursor](https://www.pling.com/p/1408466);
+- Icone do menu: [Circle do Icons8](https://icons8.com.br/icon/Y56BOL5zVXx6/circle).
 
 ## Configurando o tema Adwaita para Flatpak
 
