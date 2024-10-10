@@ -40,7 +40,10 @@ Minha configuração do [Gnome](https://www.gnome.org/) com [Wayland](https://wa
 - Cursor: [macOS Cursor](https://www.pling.com/p/1408466);
 - Icone do menu: [Circle do Icons8](https://icons8.com.br/icon/Y56BOL5zVXx6/circle).
 
-## Configurando o tema Adwaita para Flatpak
+## Flatpak
+
+
+### Configurando tema
 
 Mudar o tema dos programas [Flatpak](https://flatpak.org/):
 
@@ -53,4 +56,18 @@ Corrigir o erro dos programas [Flatpak](https://flatpak.org/) com o cursor maior
 ``` bash
 flatpak --user override --filesystem=/home/$USER/.icons/:ro
 flatpak --user override --filesystem=/usr/share/icons/:ro
+```
+
+### Configurando Chrome Apps
+
+Fechar o chrome totalmente:
+
+``` bash
+killall chrome
+```
+
+Dar permissão para o Chrome acessar as pastas `icons` e `applications`:
+
+``` bash
+flatpak override --user --filesystem=~/.local/share/applications:create --filesystem=~/.local/share/icons:create com.google.Chrome
 ```
