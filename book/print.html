@@ -184,26 +184,28 @@
 <li><a href="pc/gnome.html#extens%C3%B5es">Extensões</a></li>
 <li><a href="pc/gnome.html#keybinds">Keybinds</a></li>
 <li><a href="pc/gnome.html#apar%C3%AAncia">Aparência</a></li>
-<li><a href="pc/gnome.html#configurando-o-tema-adwaita-para-flatpak">Configurando o tema Adwaita para Flatpak</a></li>
+<li><a href="pc/gnome.html#flatpak">Flatpak</a>
+<ul>
+<li><a href="pc/gnome.html#configurando-tema">Configurando tema</a></li>
+<li><a href="pc/gnome.html#configurando-google-chrome-apps">Configurando Google Chrome Apps</a></li>
+</ul>
+</li>
 </ul>
 <p><img src="pc/imagens/screenshot.png" alt="" /></p>
 <p>Minha configuração do <a href="https://www.gnome.org/">Gnome</a> com <a href="https://wayland.freedesktop.org/">Wayland</a>. Atualmente usando no <a href="https://endeavouros.com/">EndeavourOS</a> (base <a href="https://archlinux.org/">Arch Linux</a>).</p>
 <h2 id="extensões"><a class="header" href="#extensões">Extensões</a></h2>
 <ul>
 <li><a href="https://extensions.gnome.org/extension/4269/alphabetical-app-grid/">Alphabetical App Grid</a>: Deixa o menu de aplicativos em ordem alfabética;</li>
+<li><a href="https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/">Arch Linux Updates Indicator</a>;</li>
 <li><a href="https://extensions.gnome.org/extension/517/caffeine/">Caffeine</a>: Desabilita a proteção de tela e a suspensão automática;</li>
 <li><a href="https://extensions.gnome.org/extension/779/clipboard-indicator/">Clipboard Indicator</a>: Gerenciador de área de transferência;</li>
-<li><a href="https://extensions.gnome.org/extension/5669/compact-top-bar/">Compact Top Bar</a>: Diminui o espaço entre os itens da barra superior;</li>
-<li><a href="https://extensions.gnome.org/extension/1160/dash-to-panel/">Dash to Panel</a>: Deixa a dock parecida com a do Windows, além de remover a barra superior e mover seus itens para a dock;</li>
+<li><a href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash to Dock</a>: Deixa a dock parecida com a do Windows, além de remover a barra superior e mover seus itens para a dock;</li>
 <li><a href="https://extensions.gnome.org/extension/6242/emoji-copy/">Emoji Copy</a>: Menu de emojis parecido com a do Windows 10;</li>
-<li><a href="https://extensions.gnome.org/extension/1319/gsconnect/">GSConnect</a>: Implementação do <a href="https://kdeconnect.kde.org/">KDEConnect</a> ao Gnome;</li>
-<li><a href="https://extensions.gnome.org/extension/5040/start-overlay-in-application-view/">Start Overlay in Application View</a>: Faz o <code>Super</code> ser a keybind do menu de aplicativos;</li>
 <li><a href="https://extensions.gnome.org/extension/2890/tray-icons-reloaded/">Tray Icons: Reloaded</a>: Mostra os ícones de bandeja igual ao Windows;</li>
 <li><a href="https://extensions.gnome.org/extension/19/user-themes/">User Themes</a>: Tema do shell personalizado.</li>
 </ul>
 <h2 id="keybinds"><a class="header" href="#keybinds">Keybinds</a></h2>
 <ul>
-<li><code>Super</code>: Abre o menu de aplicativos;</li>
 <li><code>Super+a</code>: Abre as notificações;</li>
 <li><code>Super+v</code>: Abre o clipboard;</li>
 <li><code>Super+.</code>: Abre o seletor de emojis;</li>
@@ -219,13 +221,21 @@
 <li>Cursor: <a href="https://www.pling.com/p/1408466">macOS Cursor</a>;</li>
 <li>Icone do menu: <a href="https://icons8.com.br/icon/Y56BOL5zVXx6/circle">Circle do Icons8</a>.</li>
 </ul>
-<h2 id="configurando-o-tema-adwaita-para-flatpak"><a class="header" href="#configurando-o-tema-adwaita-para-flatpak">Configurando o tema Adwaita para Flatpak</a></h2>
+<h2 id="flatpak"><a class="header" href="#flatpak">Flatpak</a></h2>
+<h3 id="configurando-tema"><a class="header" href="#configurando-tema">Configurando tema</a></h3>
 <p>Mudar o tema dos programas <a href="https://flatpak.org/">Flatpak</a>:</p>
 <pre><code class="language-bash">sudo flatpak override --env=GTK_THEME=Adwaita-dark
 </code></pre>
 <p>Corrigir o erro dos programas <a href="https://flatpak.org/">Flatpak</a> com o cursor maior que o resto do sistema:</p>
 <pre><code class="language-bash">flatpak --user override --filesystem=/home/$USER/.icons/:ro
 flatpak --user override --filesystem=/usr/share/icons/:ro
+</code></pre>
+<h3 id="configurando-google-chrome-apps"><a class="header" href="#configurando-google-chrome-apps">Configurando Google Chrome Apps</a></h3>
+<p>Fechar o Google Chrome totalmente:</p>
+<pre><code class="language-bash">killall chrome
+</code></pre>
+<p>Dar permissão para o Chrome acessar as pastas <code>icons</code> e <code>applications</code>:</p>
+<pre><code class="language-bash">flatpak override --user --filesystem=~/.local/share/applications:create --filesystem=~/.local/share/icons:create com.google.Chrome
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vs-codium"><a class="header" href="#vs-codium">VS Codium</a></h1>
 <p>Minha configuração do <a href="https://vscodium.com/">VS Codium</a>.</p>

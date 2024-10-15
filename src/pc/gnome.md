@@ -3,7 +3,9 @@
 - [Extensões](#extens%C3%B5es)
 - [Keybinds](#keybinds)
 - [Aparência](#aparência)
-- [Configurando o tema Adwaita para Flatpak](#configurando-o-tema-adwaita-para-flatpak)
+- [Flatpak](#flatpak)
+    - [Configurando tema](#configurando-tema)
+    - [Configurando Google Chrome Apps](#configurando-google-chrome-apps)
 
 ![](imagens/screenshot.png)
 
@@ -15,16 +17,13 @@ Minha configuração do [Gnome](https://www.gnome.org/) com [Wayland](https://wa
 - [Arch Linux Updates Indicator](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/);
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/): Desabilita a proteção de tela e a suspensão automática;
 - [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/): Gerenciador de área de transferência;
-- [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/): Deixa a dock parecida com a do Windows, além de remover a barra superior e mover seus itens para a dock;
+- [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/): Deixa a dock parecida com a do Windows, além de remover a barra superior e mover seus itens para a dock;
 - [Emoji Copy](https://extensions.gnome.org/extension/6242/emoji-copy/): Menu de emojis parecido com a do Windows 10;
-- [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/): Implementação do [KDEConnect](https://kdeconnect.kde.org/) ao Gnome;
-- [Start Overlay in Application View](https://extensions.gnome.org/extension/5040/start-overlay-in-application-view/): Faz o `Super` ser a keybind do menu de aplicativos;
 - [Tray Icons: Reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/): Mostra os ícones de bandeja igual ao Windows;
 - [User Themes](https://extensions.gnome.org/extension/19/user-themes/): Tema do shell personalizado.
 
 ## Keybinds
 
-- `Super`: Abre o menu de aplicativos;
 - `Super+a`: Abre as notificações;
 - `Super+v`: Abre o clipboard;
 - `Super+.`: Abre o seletor de emojis;
@@ -42,32 +41,31 @@ Minha configuração do [Gnome](https://www.gnome.org/) com [Wayland](https://wa
 
 ## Flatpak
 
-
 ### Configurando tema
 
 Mudar o tema dos programas [Flatpak](https://flatpak.org/):
 
-``` bash
+```bash
 sudo flatpak override --env=GTK_THEME=Adwaita-dark
 ```
 
 Corrigir o erro dos programas [Flatpak](https://flatpak.org/) com o cursor maior que o resto do sistema:
 
-``` bash
+```bash
 flatpak --user override --filesystem=/home/$USER/.icons/:ro
 flatpak --user override --filesystem=/usr/share/icons/:ro
 ```
 
-### Configurando Chrome Apps
+### Configurando Google Chrome Apps
 
-Fechar o chrome totalmente:
+Fechar o Google Chrome totalmente:
 
-``` bash
+```bash
 killall chrome
 ```
 
 Dar permissão para o Chrome acessar as pastas `icons` e `applications`:
 
-``` bash
+```bash
 flatpak override --user --filesystem=~/.local/share/applications:create --filesystem=~/.local/share/icons:create com.google.Chrome
 ```
